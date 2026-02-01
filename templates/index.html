@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detecting skateboards: all cameras</title>
+</head>
+<body>
+    <h1>List of connected cameras</h1>
+    
+    <!-- Use a Jinja for loop to display the list items -->
+    <ul>
+        {% for elem in data %}
+            <li><a href="{{ elem.url }}">{{ elem.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <p>This list has {{ data|length }} items.</p>
+</body>
+</html>

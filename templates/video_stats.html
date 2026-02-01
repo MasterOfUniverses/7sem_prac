@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detecting statistics: {{name}}</title>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js" integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <a href="{{ url_home }}">Home</a><br>
+    <h1>Camera stats</h1>
+    <div hx-get="{{ stats }}" hx-trigger="every 500ms" hx-swap="innerHTML"></div> <!-- one frame in nn = 400 ms, so if delay less then 500ms server will be very slow-->
+    <p id="updatable"></p>
+    
+    <h3>Total freeze stats</h3>
+    <ul>
+        <li>Persons: {{total_freeze[0]}}</li>
+        <li>Skates: {{total_freeze[1]}}</li>
+        <li>Skaters: {{total_freeze[2]}}</li>
+    </ul>
+    <a href="{{ url_stream }}">Video stream</a><br>
+    <a href="{{ download }}">Download result(.zip)</a><br>
+</body>
+</html>

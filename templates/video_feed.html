@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detecting skateboards: {{name}}</title>
+</head>
+<body>
+    <a href="{{ url_home }}">Home</a><br>
+    <h1>Stream from camera</h1>
+    <br>
+    <!-- Use a Jinja for loop to display the list items -->
+    <img src="{{ video }}" >
+    <br>
+    <p>Mean time (in seconds) per frame: {{mean_spf}}</p>
+    <a href="{{ url_stat }}">Statistics</a><br>
+    <a href="{{ download }}">Download result(.zip)</a><br>
+</body>
+</html>

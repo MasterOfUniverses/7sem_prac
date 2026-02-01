@@ -1,0 +1,12 @@
+flask
+opencv-python
+opencv-contrib-python
+ultralytics
+lap>=0.5.12
+matplotlib
+numpy
+torch
+torchvision
+datetime
+argparse
+ipykernel
